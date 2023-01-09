@@ -1,0 +1,6 @@
+{
+  "name": "Centro",
+  "dependencies": {
+    "@dataform/core": "2.0.1"
+  }
+}
