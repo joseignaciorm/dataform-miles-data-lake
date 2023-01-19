@@ -1,0 +1,20 @@
+config {
+    type: "operations"
+}
+
+js {
+    const source_dataset_ref = "milespartnership-data-lake.Centro_staging",
+          destination_dataset_ref = "milespartnership-data-lake.Centro_dataform",
+          metadata_files_list = [
+                "contracted_margin", 
+                "creative_metadata",
+                "delivery_source_metadata",
+                "group_metadata",
+                "line_item_metadata",
+                "tactic_metadata"]
+}
+
+${metadataTables.renderMetadataTables(
+    source_dataset_ref, 
+    destination_dataset_ref, 
+    metadata_files_list)}

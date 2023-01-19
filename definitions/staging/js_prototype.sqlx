@@ -1,0 +1,24 @@
+config {
+    type: "table",
+    schema: "dataform_prototype",
+    description: "Load the latest file and truncate the destination table", 
+}
+
+js {
+  const example = "milespartnership-data-lake.Centro_staging.delivery_source_metadata_20221227";
+
+  const date_range = constants.DATE_RANGE;
+
+  date_range.forEach(date => {
+    publish("reporting_" + date)
+      .dependencies([`${example}`])
+      .query(
+        ctx => `
+        SELECT '${country}' AS country
+        `
+      );
+  });
+}
+
+SELECT * FROM ${example}
+LIMIT 1

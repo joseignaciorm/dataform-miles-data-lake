@@ -1,0 +1,7 @@
+config {
+    type: "declaration",
+    database: "milespartnership-data-lake",
+    schema: "Centro_staging",
+    name: "delivery_source_metadata_20221227",
+    description: "Delivery source metadata"
+}

@@ -1,0 +1,12 @@
+config {
+    type: "table",
+    schema: "dataform_staging",
+    description: "Load the latest file and truncate the destination table", 
+    // column level documentation, defined in includes/docs.js
+    // columns: docs.nyc_weather
+}
+SELECT 
+    *
+FROM
+    ${ref("delivery_source_metadata_20221227")} AS delivery_source_metadata
+limit 1

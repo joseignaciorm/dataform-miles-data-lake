@@ -1,0 +1,11 @@
+config {
+    type: "operations"
+    }
+
+${multipleExternalTables.renderMultipleExternalTables(
+    constants.DATASET_NAME_SOURCE,
+    constants.TABLE_PREFFIX_SOURCE,
+    constants.DATASET_NAME_DESTINATION,
+    constants.DATE_RANGE)
+    }
+
