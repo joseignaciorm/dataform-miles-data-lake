@@ -4,7 +4,6 @@ function getLatestObject(source_dataset_ref, destination_dataset_ref, metadata_f
   build_sql_query = ""
   internal_metadata_files_list = []
 
-  
   for (i=0; i <= metadata_files_list.length - 1; i++) {
     internal_metadata_files_list.push("\'" + metadata_files_list[i] + "\'")
   }
